@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Auth0Provider } from "@auth0/auth0-react";
-import Main from './Main';
+import App from './App';
 import "./index.css";
 
 const root = ReactDOM.createRoot(
@@ -15,6 +15,6 @@ root.render(
     // redirectUri={window.location.origin}
     redirectUri="http://localhost:3000/"
   >
-    <Main />
+    <App/>
   </Auth0Provider>
 );

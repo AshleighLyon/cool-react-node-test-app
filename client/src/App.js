@@ -1,24 +1,30 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from './auth/login';
+import Main from './Main';
+import MainApple from './MainApple';
 
 function App() {
-  const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+  
+  const { isAuthenticated, user } = useAuth0();
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{!data ? "Loading..." : data}</p>
-        This is a test
-      </header>
-      
+      <div className="App">
+        { isAuthenticated ? (
+            user.app_metadata.role === "Apple" ? (
+              <MainApple />
+            ) : <Main />
+        ) 
+        : <div>
+            <h1>Cool React Node SP App</h1>
+              <h2>Welcome</h2>
+                <p style={{ fontSize: "1rem" }}>Please Login.</p>
+                <LoginButton />
+          </div>
+        }
+      </div>
     </div>
   );
 }

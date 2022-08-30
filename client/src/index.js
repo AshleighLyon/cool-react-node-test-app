@@ -9,11 +9,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <Auth0Provider
-    // domain={process.env.REACT_APP_AUTH0_DOMAIN}
     domain="test-pisys.eu.auth0.com"
     clientId="H7CJZjfszFDaQfTObOaF1G7MEDmlFxNS"
-    // redirectUri={window.location.origin}
-    redirectUri="http://localhost:3000/"
+    redirectUri={window.location.origin}
+    //redirectUri="http://localhost:3000/"
   >
     <App/>
   </Auth0Provider>

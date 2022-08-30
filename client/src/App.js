@@ -8,13 +8,16 @@ import MainApple from './MainApple';
 function App() {
   
   const { isAuthenticated, user } = useAuth0();
+  
+  //console.log("user obj", user);
+  //console.log("role is", user["cool-app/roles"][0]);
 
   return (
     <div className="App">
       <div className="App">
         { isAuthenticated ? (
-            user.app_metadata.role === "Apple" ? (
-              <MainApple />
+            user["cool-app/roles"][0] === "Apple" ? (
+               <MainApple />
             ) : <Main />
         ) 
         : <div>

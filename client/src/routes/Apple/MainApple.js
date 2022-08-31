@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
-import LogoutButton from './auth/logout';
-import AppleHome from "./routes/Role2/AppleHome";
+import LogoutButton from '../../auth/logout';
+import AppleHome from "./AppleHome";
  
 function MainApple() {
 

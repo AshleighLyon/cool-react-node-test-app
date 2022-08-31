@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Routes, NavLink, HashRouter } from "react-router-dom";
-import Home from "./routes/Home";
-import Stuff from "./routes/Stuff";
-import Contact from "./routes/Contact";
-import LogoutButton from './auth/logout';
+import Home from "./Home";
+import Stuff from "./Stuff";
+import Contact from "./Contact";
+import LogoutButton from '../../auth/logout';
  
 function Main() {
   

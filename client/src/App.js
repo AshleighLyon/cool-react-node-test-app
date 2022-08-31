@@ -1,16 +1,13 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.css";
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './auth/login';
-import Main from './Main';
-import MainApple from './MainApple';
+import Main from './routes/Orange/Main';
+import MainApple from './routes/Apple/MainApple';
 
 function App() {
   
   const { isAuthenticated, user } = useAuth0();
-  
-  //console.log("user obj", user);
-  //console.log("role is", user["cool-app/roles"][0]);
 
   return (
     <div className="App">

@@ -11,7 +11,7 @@ function Stuff() {
 
     return (
       <div>
-        <h2>STUFF</h2>
+        <h2>STUFF - ORANGE</h2>
         <p>This is the stuff page.</p>
         <p>{!data ? "Loading data..." : data}</p>
       </div>

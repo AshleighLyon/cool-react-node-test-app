@@ -5,8 +5,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h2>HOME</h2>
-        <p>Home screen which is loaded first on visiting app.</p>
+        <h2>HOME - ORANGE</h2>
+        <p>This is for all users with role orange including Stuff and Contact.</p>
         <User />
       </div>
     );
